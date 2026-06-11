@@ -28,3 +28,36 @@ window.addEventListener("scroll", () => {
     orb.style.transform = `translate3d(${depth * direction}px, ${depth * -0.3 * direction}px, 0)`;
   });
 });
+
+const modalButtons = document.querySelectorAll("[data-modal-target]");
+const modals = document.querySelectorAll("[data-modal]");
+
+modalButtons.forEach((button) => {
+  const modal = document.getElementById(button.dataset.modalTarget);
+
+  if (!modal) {
+    return;
+  }
+
+  button.addEventListener("click", () => {
+    modal.showModal();
+    document.body.classList.add("gallery-is-open");
+  });
+
+  modal.addEventListener("close", () => {
+    document.body.classList.remove("gallery-is-open");
+    button.focus();
+  });
+});
+
+modals.forEach((modal) => {
+  const closeButton = modal.querySelector("[data-close-modal]");
+
+  closeButton?.addEventListener("click", () => modal.close());
+
+  modal.addEventListener("click", (event) => {
+    if (event.target === modal) {
+      modal.close();
+    }
+  });
+});
