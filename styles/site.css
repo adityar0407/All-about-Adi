@@ -148,7 +148,51 @@ a {
   padding: 5rem 0 3rem;
 }
 
+.home-hero {
+  position: relative;
+  z-index: 1;
+  min-height: 72vh;
+  display: flex;
+  align-items: flex-end;
+  width: min(calc(100% - 2rem), var(--max-width));
+  margin: 1.5rem auto 0;
+  padding: 7rem 2.75rem 4rem;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: 2rem;
+  box-shadow: var(--shadow);
+  isolation: isolate;
+}
+
+.home-hero-image,
+.home-hero-shade {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.home-hero-image {
+  z-index: -2;
+  object-fit: cover;
+  object-position: center 55%;
+  opacity: 0.58;
+  animation: photo-breathe 18s ease-in-out infinite alternate;
+}
+
+.home-hero-shade {
+  z-index: -1;
+  background:
+    linear-gradient(90deg, rgba(10, 20, 31, 0.9) 0%, rgba(10, 20, 31, 0.65) 58%, rgba(10, 20, 31, 0.34) 100%),
+    linear-gradient(0deg, rgba(10, 20, 31, 0.78), transparent 65%);
+}
+
+.home-hero-copy {
+  max-width: 68rem;
+}
+
 .hero h1,
+.home-hero h1,
 .page-intro h1,
 .timeline-hero h1 {
   margin: 0;
@@ -157,6 +201,47 @@ a {
   font-size: clamp(3.2rem, 7.2vw, 6rem);
   line-height: 0.94;
   letter-spacing: -0.065em;
+}
+
+.home-hero h1 {
+  max-width: 62rem;
+  font-size: clamp(3.8rem, 8.2vw, 7.4rem);
+}
+
+.home-hero-intro {
+  margin: 1.8rem 0 0;
+  color: var(--ink-muted);
+  font-size: clamp(1.2rem, 2vw, 1.55rem);
+  line-height: 1.5;
+}
+
+.home-about {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(20rem, 0.75fr);
+  gap: 2.5rem;
+  align-items: start;
+  padding: 2rem 0 5rem;
+}
+
+.home-bio {
+  max-width: 47rem;
+}
+
+.home-bio p {
+  margin: 0 0 1.35rem;
+  color: var(--ink-muted);
+  font-size: 1.08rem;
+  line-height: 1.8;
+}
+
+.home-bio p:first-child {
+  color: var(--ink);
+  font-size: 1.2rem;
+}
+
+.home-about .hero-panel {
+  position: sticky;
+  top: 2rem;
 }
 
 .hero-text,
@@ -187,8 +272,7 @@ a {
   color: var(--cream);
 }
 
-.hero-actions,
-.spotlight-rail {
+.hero-actions {
   display: flex;
   flex-wrap: wrap;
   gap: 0.9rem;
@@ -271,7 +355,25 @@ a {
   padding: 1.6rem;
 }
 
+.page-home .section-grid {
+  padding-top: 3rem;
+}
+
+.page-home .feature-card {
+  min-height: 15rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.page-home .feature-card > p:last-child {
+  margin-bottom: 0;
+  color: var(--ink);
+  font-size: 1.08rem;
+}
+
 .spotlight {
+  position: relative;
   display: grid;
   grid-template-columns: 1.2fr 0.8fr;
   gap: 1.5rem;
@@ -279,17 +381,99 @@ a {
   padding: 2rem 0 5rem;
 }
 
-.mini-chip {
-  padding: 0.75rem 1rem;
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.05);
+.spotlight-photo {
+  min-height: 34rem;
+  padding: 3rem;
+  overflow: hidden;
+  align-items: end;
   border: 1px solid var(--border);
+  border-radius: 2rem;
+  box-shadow: var(--shadow);
+  isolation: isolate;
+  margin-bottom: 4rem;
+}
+
+.spotlight-image,
+.spotlight-shade {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.spotlight-image {
+  z-index: -2;
+  object-fit: cover;
+  object-position: center;
+}
+
+.spotlight-shade {
+  z-index: -1;
+  background:
+    linear-gradient(90deg, rgba(9, 18, 28, 0.92) 0%, rgba(9, 18, 28, 0.72) 55%, rgba(9, 18, 28, 0.34) 100%),
+    linear-gradient(0deg, rgba(9, 18, 28, 0.76), transparent 72%);
+}
+
+.spotlight-photo .spotlight-copy p,
+.spotlight-photo .spotlight-next p {
+  color: rgba(237, 244, 247, 0.86);
+}
+
+.spotlight-next {
+  padding: 1.6rem;
+  border-left: 1px solid var(--border);
+}
+
+.spotlight-next p {
+  margin: 0 0 0.65rem;
+  color: var(--ink-muted);
+}
+
+.text-link {
+  display: inline-flex;
+  gap: 0.55rem;
+  align-items: center;
+  color: var(--cream);
+  font-weight: 700;
+}
+
+.text-link span {
+  transition: transform 180ms ease;
+}
+
+.text-link:hover span {
+  transform: translateX(0.3rem);
 }
 
 .page-intro,
 .timeline-hero {
   padding: 4rem 0 2rem;
   max-width: 56rem;
+}
+
+.timeline-arc {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.75rem;
+  margin-top: 2rem;
+}
+
+.timeline-arc span {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0.85rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.045);
+  color: var(--ink-muted);
+  font-size: 0.86rem;
+}
+
+.timeline-arc b {
+  color: var(--cream);
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
 }
 
 .project-stack {
@@ -322,6 +506,7 @@ a {
 }
 
 .timeline-item {
+  position: relative;
   min-height: 74vh;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -330,6 +515,49 @@ a {
   opacity: 0.38;
   transform: scale(0.96);
   transition: opacity 500ms ease, transform 500ms ease;
+}
+
+.timeline-item-photo {
+  width: 100vw;
+  max-width: none;
+  margin-left: calc(50% - 50vw);
+  padding: 4rem max(2rem, calc((100vw - var(--max-width)) / 2));
+  min-height: 100vh;
+  overflow: hidden;
+  isolation: isolate;
+  opacity: 0.78;
+}
+
+.timeline-item-photo.is-visible {
+  opacity: 1;
+}
+
+.timeline-backdrop,
+.timeline-photo-shade {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.timeline-backdrop {
+  z-index: -2;
+  object-fit: cover;
+  object-position: center;
+  opacity: 0.7;
+  transform: scale(1.04);
+  transition: transform 1.2s ease;
+}
+
+.timeline-item-photo.is-visible .timeline-backdrop {
+  transform: scale(1);
+}
+
+.timeline-photo-shade {
+  z-index: -1;
+  background:
+    linear-gradient(90deg, rgba(8, 17, 28, 0.82), rgba(8, 17, 28, 0.44) 50%, rgba(8, 17, 28, 0.76)),
+    linear-gradient(0deg, rgba(8, 17, 28, 0.78), transparent 58%, rgba(8, 17, 28, 0.55));
 }
 
 .timeline-item:nth-child(even) .timeline-meta {
@@ -360,6 +588,48 @@ a {
   padding: 2rem;
   position: relative;
   overflow: hidden;
+}
+
+.timeline-card-with-photo {
+  padding: 0;
+}
+
+.timeline-card-image {
+  display: block;
+  width: 100%;
+  height: 25rem;
+  object-fit: cover;
+  object-position: center 38%;
+}
+
+.timeline-card-copy {
+  padding: 1.7rem 2rem 2rem;
+}
+
+.timeline-item-cariad .timeline-photo-shade {
+  background:
+    linear-gradient(90deg, rgba(8, 17, 28, 0.86), rgba(8, 17, 28, 0.5) 50%, rgba(8, 17, 28, 0.78)),
+    linear-gradient(0deg, rgba(8, 17, 28, 0.86), transparent 55%, rgba(8, 17, 28, 0.5));
+}
+
+.timeline-item-cariad .timeline-card-image {
+  height: 22rem;
+}
+
+.timeline-item-cariad-manager .timeline-backdrop {
+  object-position: center 48%;
+}
+
+.timeline-item-cariad-manager .timeline-card-image {
+  object-position: center 65%;
+}
+
+.timeline-item-cariad-analyst .timeline-backdrop {
+  object-position: center 42%;
+}
+
+.timeline-item-cariad-analyst .timeline-card-image {
+  object-position: center 55%;
 }
 
 .timeline-card::after {
@@ -418,9 +688,19 @@ body[data-theme="navy"] {
   }
 }
 
+@keyframes photo-breathe {
+  from {
+    transform: scale(1.03);
+  }
+  to {
+    transform: scale(1.08);
+  }
+}
+
 @media (max-width: 960px) {
   .site-header,
   .hero,
+  .home-about,
   .spotlight,
   .section-grid,
   .project-stack,
@@ -446,6 +726,25 @@ body[data-theme="navy"] {
     padding-top: 3rem;
   }
 
+  .home-hero {
+    min-height: auto;
+    padding: 6rem 1.5rem 3.5rem;
+  }
+
+  .home-about .hero-panel {
+    position: static;
+  }
+
+  .timeline-arc {
+    grid-template-columns: 1fr;
+  }
+
+  .spotlight-next {
+    border-left: 0;
+    border-top: 1px solid var(--border);
+    padding: 1.5rem 0 0;
+  }
+
   .timeline-line {
     left: 1.2rem;
   }
@@ -457,14 +756,29 @@ body[data-theme="navy"] {
     order: initial;
   }
 
+  .timeline-item-photo {
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    padding: 4rem 1rem;
+  }
+
   .timeline-meta,
   .timeline-card {
     margin-left: 2rem;
+  }
+
+  .timeline-card-image {
+    height: 22rem;
+  }
+
+  .timeline-item-cariad .timeline-card-image {
+    height: 20rem;
   }
 }
 
 @media (max-width: 640px) {
   .hero h1,
+  .home-hero h1,
   .page-intro h1,
   .timeline-hero h1 {
     font-size: clamp(2.8rem, 17vw, 4.2rem);
@@ -477,5 +791,31 @@ body[data-theme="navy"] {
   .site-nav a {
     padding: 0.65rem 0.8rem;
     font-size: 0.92rem;
+  }
+
+  .home-hero {
+    width: calc(100% - 1rem);
+    margin-top: 0.75rem;
+    border-radius: 1.5rem;
+  }
+
+  .spotlight-photo {
+    min-height: 38rem;
+    padding: 1.5rem;
+    border-radius: 1.5rem;
+  }
+
+  .timeline-card-image {
+    height: 19rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .home-hero-image {
+    animation: none;
+  }
+
+  .timeline-backdrop {
+    transition: none;
   }
 }

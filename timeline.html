@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Timeline | Aditya Ravi</title>
-  <meta name="description" content="Interactive timeline of Aditya Ravi's research, education, internships, and leadership experience.">
+  <title>Timeline | Adi</title>
+  <meta name="description" content="Interactive timeline of Adi's research, education, internships, travel, and leadership experience.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800;900&family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet">
@@ -17,7 +17,7 @@
   <div class="background-grid"></div>
 
   <header class="site-header">
-    <a class="wordmark" href="index.html">Aditya Ravi</a>
+    <a class="wordmark" href="index.html">Adi</a>
     <nav class="site-nav">
       <a href="index.html">Home</a>
       <a href="projects.html">Projects</a>
@@ -28,11 +28,16 @@
 
   <main>
     <section class="section-shell timeline-hero">
-      <p class="eyebrow">Interactive timeline</p>
-      <h1>From industrial engineering to quantum computing.</h1>
+      <p class="eyebrow">My journey so far</p>
+      <h1>From industrial engineering to quantum computing</h1>
       <p>
-        The page is built to move as you scroll. Each milestone fades in, sharpens, and briefly takes over the screen before yielding to the next chapter.
+        A look at the steps, pivots, and experiences that brought me from industrial engineering and product work into quantum computing.
       </p>
+      <div class="timeline-arc" aria-label="Timeline phases">
+        <span><b>01</b> Foundations</span>
+        <span><b>02</b> Product and systems</span>
+        <span><b>03</b> Quantum computing</span>
+      </div>
     </section>
 
     <section class="timeline-shell">
@@ -40,23 +45,34 @@
 
       <article class="timeline-item" data-accent="cream">
         <div class="timeline-meta">
-          <span class="timeline-date">Apr 2026 - Present</span>
+          <span class="timeline-date">2026 - Present</span>
           <span class="timeline-kicker">Madison, Wisconsin</span>
         </div>
         <div class="timeline-card glass-card">
           <h2>Otten Group</h2>
-          <p>Research assistantship in theoretical quantum information science, focused on benchmarking pipelines that connect NISQ circuits to fault-tolerant architectures.</p>
+          <p>Shifted toward quantum algorithms and early fault-tolerant quantum computing, focusing on how algorithms should be designed for devices that are improving but still far from ideal.</p>
+        </div>
+      </article>
+
+      <article class="timeline-item" data-accent="deep">
+        <div class="timeline-meta">
+          <span class="timeline-date">2026</span>
+          <span class="timeline-kicker">Madison, Wisconsin</span>
+        </div>
+        <div class="timeline-card glass-card">
+          <h2>Superconducting resonator work</h2>
+          <p>Began designing superconducting resonators to study material losses and better understand the hardware limits that affect quantum devices.</p>
         </div>
       </article>
 
       <article class="timeline-item" data-accent="slate">
         <div class="timeline-meta">
-          <span class="timeline-date">Aug 2025 - Apr 2026</span>
+          <span class="timeline-date">2025 - 2026</span>
           <span class="timeline-kicker">Madison, Wisconsin</span>
         </div>
         <div class="timeline-card glass-card">
-          <h2>Sinclair Lab</h2>
-          <p>Built early experimental infrastructure for modular neutral-atom quantum computing, spanning optics, sensor pipelines, and magnetic field stabilization.</p>
+          <h2>Sinclair Quantum Lab</h2>
+          <p>Worked in a neutral-atom quantum computing lab, contributing to early experimental infrastructure, magnetic-field stabilization, data pipelines, and lab systems.</p>
         </div>
       </article>
 
@@ -66,41 +82,56 @@
           <span class="timeline-kicker">New chapter</span>
         </div>
         <div class="timeline-card glass-card">
-          <h2>Started at UW-Madison</h2>
-          <p>Began the M.S. in Physics with a focus on quantum computing, bringing product, systems, and engineering experience into a research environment.</p>
+          <h2>UW–Madison</h2>
+          <p>Started graduate school at the University of Wisconsin–Madison in Physics with a focus on quantum computing.</p>
         </div>
       </article>
 
-      <article class="timeline-item" data-accent="navy">
+      <article class="timeline-item timeline-item-photo" data-accent="navy">
+        <img class="timeline-backdrop" src="assets/photos/india-mountains.jpeg" alt="" aria-hidden="true" loading="lazy" decoding="async">
+        <div class="timeline-photo-shade"></div>
         <div class="timeline-meta">
           <span class="timeline-date">Feb 2025 - Jul 2025</span>
           <span class="timeline-kicker">India</span>
         </div>
-        <div class="timeline-card glass-card">
-          <h2>Travel break</h2>
-          <p>Took time to travel through India before beginning graduate study, creating a clear reset between industry work and the next research chapter.</p>
+        <div class="timeline-card timeline-card-with-photo glass-card">
+          <img class="timeline-card-image" src="assets/photos/adi-india.jpeg" alt="Adi sitting on a rock overlooking a green mountain valley in India" loading="lazy" decoding="async">
+          <div class="timeline-card-copy">
+            <h2>Travel break</h2>
+            <p>Took time to travel through India before beginning graduate study, creating a clear reset between industry work and the next research chapter.</p>
+          </div>
         </div>
       </article>
 
-      <article class="timeline-item" data-accent="deep">
+      <article class="timeline-item timeline-item-photo timeline-item-cariad timeline-item-cariad-manager" data-accent="deep">
+        <img class="timeline-backdrop" src="assets/photos/seattle-rainier.jpeg" alt="" aria-hidden="true" loading="lazy" decoding="async">
+        <div class="timeline-photo-shade"></div>
         <div class="timeline-meta">
-          <span class="timeline-date">May 2024 - Dec 2024</span>
+          <span class="timeline-date">2024</span>
           <span class="timeline-kicker">Seattle, Washington</span>
         </div>
-        <div class="timeline-card glass-card">
-          <h2>Associate Product Manager, CARIAD</h2>
-          <p>Led product direction for cloud-native software updates across Volkswagen Group vehicles, tying engineering priorities to measurable outcomes.</p>
+        <div class="timeline-card timeline-card-with-photo glass-card">
+          <img class="timeline-card-image" src="assets/photos/cariad-lounge.jpeg" alt="CARIAD workspace lounge with a vehicle display" loading="lazy" decoding="async">
+          <div class="timeline-card-copy">
+            <h2>CARIAD Product Manager</h2>
+            <p>Worked on cloud-native software update systems across Volkswagen Group vehicles, helping with roadmaps, knowledge transfer, product metrics, and cross-functional coordination.</p>
+          </div>
         </div>
       </article>
 
-      <article class="timeline-item" data-accent="slate">
+      <article class="timeline-item timeline-item-photo timeline-item-cariad timeline-item-cariad-analyst" data-accent="slate">
+        <img class="timeline-backdrop" src="assets/photos/cariad-office.jpeg" alt="" aria-hidden="true" loading="lazy" decoding="async">
+        <div class="timeline-photo-shade"></div>
         <div class="timeline-meta">
-          <span class="timeline-date">Feb 2023 - May 2024</span>
+          <span class="timeline-date">2023</span>
           <span class="timeline-kicker">Seattle, Washington</span>
         </div>
-        <div class="timeline-card glass-card">
-          <h2>Product Analyst, CARIAD</h2>
-          <p>Drove analytics, KPI definition, dashboards, and product decision-making across platform usage, onboarding, and release operations.</p>
+        <div class="timeline-card timeline-card-with-photo glass-card">
+          <img class="timeline-card-image" src="assets/photos/cariad-volkswagen.jpeg" alt="Orange Volkswagen display inside the CARIAD office" loading="lazy" decoding="async">
+          <div class="timeline-card-copy">
+            <h2>CARIAD Product Analyst</h2>
+            <p>Moved into product analytics, working with SQL, KQL, dashboards, product usage data, and platform metrics to help teams make clearer decisions.</p>
+          </div>
         </div>
       </article>
 
@@ -111,7 +142,7 @@
         </div>
         <div class="timeline-card glass-card">
           <h2>Graduated from Penn State</h2>
-          <p>Completed a B.S. in Industrial Engineering, building the systems foundation that still shapes how I approach research and product work.</p>
+          <p>Graduated with a B.S. in Industrial Engineering, carrying forward a way of thinking rooted in systems, optimization, data, and decision-making.</p>
         </div>
       </article>
 
@@ -121,8 +152,8 @@
           <span class="timeline-kicker">Capstone</span>
         </div>
         <div class="timeline-card glass-card">
-          <h2>CeCe J’s Snacks</h2>
-          <p>Led a capstone project focused on facility flow, layout redesign, simulation, and bottleneck reduction for a growing production operation.</p>
+          <h2>CeCe J’s Snacks capstone</h2>
+          <p>Led an industrial engineering capstone focused on improving production flow through floor layout design, time studies, and simulation.</p>
         </div>
       </article>
 
@@ -132,19 +163,19 @@
           <span class="timeline-kicker">Volkswagen Automotive Cloud</span>
         </div>
         <div class="timeline-card glass-card">
-          <h2>Intern, Customer Success Engineer</h2>
-          <p>The first role in the CARIAD and Volkswagen trajectory, focused on cloud platform use cases, customer workflows, and technical validation.</p>
+          <h2>CARIAD internship</h2>
+          <p>Joined Volkswagen’s cloud platform team as a Customer Solutions Engineer intern, working on onboarding, user journeys, and developer platform use cases.</p>
         </div>
       </article>
 
       <article class="timeline-item" data-accent="navy">
         <div class="timeline-meta">
-          <span class="timeline-date">Fall 2021 - Fall 2022</span>
+          <span class="timeline-date">2021 - 2022</span>
           <span class="timeline-kicker">Independent study</span>
         </div>
         <div class="timeline-card glass-card">
-          <h2>Ground traffic optimization research</h2>
-          <p>Worked on distributed scheduling ideas for navigating vehicles through intersections without traffic signals.</p>
+          <h2>Independent study</h2>
+          <p>Worked on a distributed scheduling problem for autonomous vehicles at intersections, one of my first serious experiences with algorithms, simulation, and systems thinking.</p>
         </div>
       </article>
 
@@ -165,8 +196,8 @@
           <span class="timeline-kicker">Penn State</span>
         </div>
         <div class="timeline-card glass-card">
-          <h2>Founded and led the Squash Club</h2>
-          <p>Served as president, grew the club significantly, and built a new campus community around the sport.</p>
+          <h2>Penn State Squash</h2>
+          <p>Served as president, helping grow the community, rebrand the club, and introduce more students to the sport.</p>
         </div>
       </article>
 
@@ -176,8 +207,8 @@
           <span class="timeline-kicker">Grand Rapids, Michigan</span>
         </div>
         <div class="timeline-card glass-card">
-          <h2>Internship, Steelcase</h2>
-          <p>Worked on customer solutions and specials engineering, coordinating across design, manufacturing, and product teams.</p>
+          <h2>Steelcase</h2>
+          <p>Worked with the Specials engineering team on customized product orders, design changes, pilot reviews, and manufacturing coordination.</p>
         </div>
       </article>
 
@@ -188,7 +219,7 @@
         </div>
         <div class="timeline-card glass-card">
           <h2>Engineering Consulting Collaborative</h2>
-          <p>Began leading ECC in spring 2021, helping drive client engagement, consulting culture, and student development.</p>
+          <p>Helped lead student consulting work at Penn State, working with local businesses and learning how to communicate technical ideas to real clients.</p>
         </div>
       </article>
 
@@ -209,27 +240,34 @@
           <span class="timeline-kicker">Farmington Hills, Michigan</span>
         </div>
         <div class="timeline-card glass-card">
-          <h2>Internship, PKC Group</h2>
-          <p>Worked in process engineering on wiring harness design workflows and database transition efforts for the specialty projects group.</p>
+          <h2>PKC Group</h2>
+          <p>Worked as a process engineering intern, where I learned how engineering decisions show up in real manufacturing systems and day-to-day operations.</p>
+        </div>
+      </article>
+
+      <article class="timeline-item" data-accent="deep">
+        <div class="timeline-meta">
+          <span class="timeline-date">2019</span>
+          <span class="timeline-kicker">Early research</span>
+        </div>
+        <div class="timeline-card glass-card">
+          <h2>First steps into research</h2>
+          <p>Explored geophysical fluid dynamics and the Navier-Stokes equations, which gave me my first taste of how deep and messy real research can be.</p>
         </div>
       </article>
 
       <article class="timeline-item" data-accent="mist">
         <div class="timeline-meta">
-          <span class="timeline-date">Aug 2018</span>
+          <span class="timeline-date">2018</span>
           <span class="timeline-kicker">The beginning</span>
         </div>
         <div class="timeline-card glass-card">
-          <h2>Started undergrad at Penn State</h2>
-          <p>The first step in a path that would eventually connect industrial engineering, product systems, and quantum computing.</p>
+          <h2>Penn State begins</h2>
+          <p>Started my undergraduate journey in Industrial Engineering, where I began learning how to think about systems, optimization, data, and decision-making.</p>
         </div>
       </article>
     </section>
   </main>
-
-  <footer class="site-footer">
-    <p>The timeline is designed to accept photos later without changing the overall motion system.</p>
-  </footer>
 
   <script src="scripts/site.js"></script>
 </body>

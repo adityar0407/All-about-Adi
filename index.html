@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Aditya Ravi | Quantum Computing</title>
-  <meta name="description" content="Aditya Ravi's personal website focused on quantum computing, research, product work, and selected projects.">
+  <title>Adi | Quantum Computing</title>
+  <meta name="description" content="Adi's personal website about quantum computing research, product experience, and the questions connecting hardware, software, and real-world applications.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800;900&family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet">
@@ -16,7 +16,7 @@
   <div class="background-grid"></div>
 
   <header class="site-header">
-    <a class="wordmark" href="index.html">Aditya Ravi</a>
+    <a class="wordmark" href="index.html">Adi</a>
     <nav class="site-nav">
       <a class="is-active" href="index.html">Home</a>
       <a href="projects.html">Projects</a>
@@ -26,83 +26,94 @@
   </header>
 
   <main>
-    <section class="hero section-shell">
-      <div class="hero-copy">
-        <p class="eyebrow">Quantum computing · systems · product thinking</p>
-        <h1>Building across quantum research, experimental systems, and product execution.</h1>
-        <p class="hero-text">
-          I am Aditya Ravi, currently working in quantum computing at the University of Wisconsin-Madison.
-          My work spans theoretical benchmarking, experimental infrastructure, and the habit of translating complex systems into usable outcomes.
-        </p>
+    <section class="home-hero">
+      <img class="home-hero-image" src="assets/photos/night-sky.jpeg" alt="" aria-hidden="true" fetchpriority="high" decoding="async">
+      <div class="home-hero-shade"></div>
+      <div class="home-hero-copy">
+        <p class="eyebrow">Quantum computing · research · curiosity</p>
+        <h1>Exploring quantum computing, one question at a time.</h1>
+        <p class="home-hero-intro">Hey there! I’m Adi, and welcome to my world.</p>
         <div class="hero-actions">
-          <a class="button button-primary" href="timeline.html">View timeline</a>
-          <a class="button button-secondary" href="projects.html">See projects</a>
+          <a class="button button-primary" href="projects.html">Explore my work</a>
+          <a class="button button-secondary" href="timeline.html">Follow my journey</a>
         </div>
       </div>
-      <div class="hero-panel glass-card">
+    </section>
+
+    <section class="section-shell home-about">
+      <div class="home-bio">
+        <p>
+          As you navigate through my website, you’ll get a glimpse into my journey. Where I am today, how I got here, and the work I’m excited to keep building on. I’m currently in graduate school at the University of Wisconsin–Madison, where I’m learning and researching within the quantum computing space.
+        </p>
+        <p>
+          I’ve always been drawn to emerging technology. Before graduate school, I worked in product and emerging tech, where I became interested in how complex ideas move from research and engineering into real-world systems. And while AI seems to be everywhere around us today, I’m working in a field that aims to bring about the next revolution in computing through quantum physics.
+        </p>
+        <p>
+          My current interests sit at the intersection of quantum algorithms, error correction, hardware-dependent resource estimation, and how we can scale quantum systems into something practically useful. Long term, I hope to help bridge the gap between quantum research, industry, and real-world applications.
+        </p>
+        <p>
+          Outside of research, I’m someone who loves learning, building, asking questions, and connecting with people who are excited about the future of technology.
+        </p>
+        <p>
+          Feel free to check out some of my work, and I’m always happy to chat about my ongoing research!
+        </p>
+      </div>
+
+      <aside class="hero-panel glass-card">
         <div class="panel-label">Current focus</div>
         <ul class="stat-list">
           <li>
             <span class="stat-title">Otten Group</span>
-            <span class="stat-copy">Benchmarking NISQ-era circuits against fault-tolerant constraints.</span>
+            <span class="stat-copy">Understanding quantum algorithm design from the NISQ era to the early fault-tolerant regime, where devices are improving but still far from ideal.</span>
           </li>
           <li>
-            <span class="stat-title">Quantum systems</span>
-            <span class="stat-copy">Theory, lab infrastructure, optics, control, and data pipelines.</span>
+            <span class="stat-title">Hardware-aware thinking</span>
+            <span class="stat-copy">Designing superconducting resonators and drawing from neutral-atom lab experience to understand how hardware impacts software in the full stack.</span>
           </li>
           <li>
-            <span class="stat-title">Background</span>
-            <span class="stat-copy">Industrial engineering, product strategy, and systems-level execution.</span>
+            <span class="stat-title">Open-source tools</span>
+            <span class="stat-copy">Creating quantum software tools that make resource estimates and algorithm tradeoffs easier to explore.</span>
           </li>
         </ul>
-      </div>
+      </aside>
     </section>
 
     <section class="section-shell section-grid">
       <article class="feature-card glass-card">
         <p class="eyebrow">Research</p>
-        <h2>Quantum work with both theoretical and experimental grounding.</h2>
         <p>
-          From compiler-aware benchmarking pipelines to neutral-atom lab infrastructure, the work centers on how ambitious quantum systems become reliable and scalable.
+          Asking how quantum algorithms can be designed for the machines we are likely to have next, not just the machines we hope to have someday.
         </p>
       </article>
       <article class="feature-card glass-card">
         <p class="eyebrow">Industry</p>
-        <h2>Product experience at CARIAD and Volkswagen systems.</h2>
         <p>
-          I have led product transitions, analytics, and platform decisions across software delivery, customer-facing use cases, and large-scale vehicle ecosystems.
+          Before graduate school, I worked in product where I learned how to turn technical complexity into clearer decisions, roadmaps, and user-facing outcomes.
         </p>
       </article>
       <article class="feature-card glass-card">
         <p class="eyebrow">Leadership</p>
-        <h2>Clubs, consulting, teaching, and building communities.</h2>
         <p>
-          The throughline is the same: start things, shape teams, and make technical work legible to the people around it.
+          I enjoy working with people, shaping teams, and helping technical ideas become easier to understand, discuss, and act on.
         </p>
       </article>
     </section>
 
-    <section class="section-shell spotlight">
+    <section class="section-shell spotlight spotlight-photo">
+      <img class="spotlight-image" src="assets/photos/hillside-sunset.jpeg" alt="Sunset over a hillside town framed by tall trees" loading="lazy" decoding="async">
+      <div class="spotlight-shade"></div>
       <div class="spotlight-copy">
-        <p class="eyebrow">Selected story</p>
         <h2>A career path shaped by systems thinking.</h2>
         <p>
-          Industrial engineering trained me to see flow, bottlenecks, and constraints. Product work taught me how to align people around outcomes. Quantum computing is where those instincts now meet frontier science.
+          Industrial engineering taught me to notice how systems fit together and where they get stuck. Product work showed me how technical ideas become choices that affect real people. Quantum computing gives me a new set of questions to explore with both perspectives in mind.
         </p>
       </div>
-      <div class="spotlight-rail">
-        <div class="mini-chip">UW-Madison</div>
-        <div class="mini-chip">Otten Group</div>
-        <div class="mini-chip">Sinclair Lab</div>
-        <div class="mini-chip">CARIAD</div>
-        <div class="mini-chip">Penn State</div>
+      <div class="spotlight-next">
+        <p>Curious how those chapters connect?</p>
+        <a class="text-link" href="timeline.html">Explore the timeline <span aria-hidden="true">→</span></a>
       </div>
     </section>
   </main>
-
-  <footer class="site-footer">
-    <p>Designed around a cream, slate, and navy palette with motion-led storytelling.</p>
-  </footer>
 
   <script src="scripts/site.js"></script>
 </body>
