@@ -61,3 +61,22 @@ modals.forEach((modal) => {
     }
   });
 });
+
+const galleryPhotos = document.querySelectorAll("[data-gallery-photo]");
+
+galleryPhotos.forEach((photo) => {
+  const toggleCaption = () => {
+    const willShow = !photo.classList.contains("is-caption-visible");
+
+    galleryPhotos.forEach((item) => item.classList.remove("is-caption-visible"));
+    photo.classList.toggle("is-caption-visible", willShow);
+  };
+
+  photo.addEventListener("click", toggleCaption);
+  photo.addEventListener("keydown", (event) => {
+    if (event.key === "Enter" || event.key === " ") {
+      event.preventDefault();
+      toggleCaption();
+    }
+  });
+});
