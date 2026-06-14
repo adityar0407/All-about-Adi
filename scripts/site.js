@@ -20,6 +20,7 @@ if (timelineItems.length) {
 }
 
 const orbs = document.querySelectorAll(".background-orb");
+const backToTopButton = document.querySelector("[data-back-to-top]");
 
 window.addEventListener("scroll", () => {
   const depth = window.scrollY * 0.02;
@@ -27,6 +28,13 @@ window.addEventListener("scroll", () => {
     const direction = index % 2 === 0 ? 1 : -1;
     orb.style.transform = `translate3d(${depth * direction}px, ${depth * -0.3 * direction}px, 0)`;
   });
+
+  backToTopButton?.classList.toggle("is-visible", window.scrollY > window.innerHeight);
+});
+
+backToTopButton?.addEventListener("click", () => {
+  const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  window.scrollTo({ top: 0, behavior: prefersReducedMotion ? "auto" : "smooth" });
 });
 
 const modalButtons = document.querySelectorAll("[data-modal-target]");
